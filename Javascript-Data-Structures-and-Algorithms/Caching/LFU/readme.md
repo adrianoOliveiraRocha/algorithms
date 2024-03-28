@@ -1,0 +1,4 @@
+<h1>Least Frequently Used Caching</h1>
+Least frequently used (LFU) caching is a caching algorithm used by the operating system to manage memory. The system tracks the number of times a block is referenced in memory. By design, when the cache exceeds its limit, the system deletes the item with the lowest reference frequency. The easiest implementation
+of the LFU cache is assigning a counter to every block loaded into the cache and incrementing a counter every time a reference is made to that block. When the cache exceeds its limit, the system searches for the block with the lowest counter and
+removes it from the cache.

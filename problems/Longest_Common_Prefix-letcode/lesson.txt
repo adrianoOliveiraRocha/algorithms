@@ -1,0 +1,5 @@
+You can sort an array of strings. The strings will be organizated in 
+alphabetical order. 
+
+If the a[0][i] is equals a[n-1][i], all the rest that exists between 
+them is equals as well

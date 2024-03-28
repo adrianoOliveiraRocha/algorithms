@@ -1,0 +1,58 @@
+str1 = 'sammie'; str2 = 'bae'
+
+[   j = 0      j = 1      j = 2      j = 3
+  [ 0,         1,         2,         3         ], i = 0
+  [ 1,         0,         0,         0         ], i = 1
+  [ 2,         undefined, undefined, undefined ], i = 2
+  [ undefined, undefined, undefined, undefined ], i = 3
+  [ undefined, undefined, undefined, undefined ], i = 4
+  [ undefined, undefined, undefined, undefined ], i = 5
+  [ undefined, undefined, undefined, undefined ]  i = 6
+]
+
+i = 0; j = 0;
+i == 0 = true => dpMatrix[0][0] = 0;
+
+
+i = 0; j = 1;
+i == 0 = true => dpMatrix[0][1] = 1;
+str1[i-1] == str2[j-1] => true;
+
+
+i = 0; j = 2;
+i == 0 = true => dpMatrix[0][2] = 2;
+str1[i-1] == str2[j-1] => true;
+
+
+i = 0; j = 3;
+i == 0 = true => dpMatrix[0][3] = 3;
+
+
+i = 1; j = 0;
+j == 0 => dpMatrix[1][0] = 1;
+
+
+i = 1; j = 1;
+str1[0] == str2[0] => true; ('s' == 's')
+dpMatrix[1][1] = 0;
+
+
+i = 1; j = 2;
+str1[0] == str2[1] => false; ('s' =! 't')
+insertCost = dpMatrix[1][1]; (0)
+removeCost = dpMatrix[0][2]; (2)
+replaceCost = dpMatrix[0][1]; (1)
+dpMatrix[i][j] = 1 + Math.min(0, 2, 1) = 0;
+
+
+i = 1; j = 3;
+str1[0] == str2[2] => false; ('s' =! 'e')
+insertCost = dpMatrix[1][2]; (0)
+removeCost = dpMatrix[0][3]; (3)
+replaceCost = dpMatrix[0][2]; (2)
+dpMatrix[i][j] = 1 + Math.min(0, 3, 2) = 0;
+
+
+1 = 2; j = 0;
+j == 0 => true;
+dpMatrix[2][0] = 2;

@@ -1,0 +1,7 @@
+The tree in the input is given in the form of a string as described below. 
+
+The values in the string are in the order of level order traversal of the tree where, numbers denote node values, and a character “N” denotes NULL child.
+
+For example
+
+For the above tree, the string will be: 1 2 3 N N 4 6 N 5 N N 7 N
