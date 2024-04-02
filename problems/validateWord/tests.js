@@ -4,13 +4,11 @@ const validateWord = require('./validateWord');
 
 const Tests = {
   test0() {
-    //"abcabc" true
     console.log(validateWord("abcabc"));
   },
 
   test1() {
-    //"abcabcd" false
+    console.log(validateWord("Abcabc"));
   }
 }
 
-Tests.test0();

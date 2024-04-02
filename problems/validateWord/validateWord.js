@@ -1,6 +1,7 @@
 'use strict'
-
+//ok
 function validateWord(s) {
+  s = s.toLowerCase();
   let map = {};
   for(let i = 0; i < s.length; i++) {
     if(!map[s[i]]) {
