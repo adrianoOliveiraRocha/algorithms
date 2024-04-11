@@ -1,15 +1,14 @@
 'use strict'
 
-function ispar0(x) {
+function ispar0(parenStr) {
   
-  if(x.length % 2 !== 0){
+  if(parenStr.length % 2 !== 0){
     return false;
   }
-
-  // your code here
+  
   const r = [];
-  for(let i = 0; i < x.length; i++) {
-    const c = x[i];    
+  for(let i = 0; i < parenStr.length; i++) {
+    const c = parenStr[i];    
     switch(c) {
       case "(": 
         r.push(")");
