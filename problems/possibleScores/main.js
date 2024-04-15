@@ -1,6 +1,6 @@
 'use strict'
 
-function possibleScores(answerOfTom,scoreOfTom,answerOfJohn) {
+function possibleScores(answerOfTom, scoreOfTom, answerOfJohn) {
 
 }
 
