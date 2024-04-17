@@ -1,9 +1,11 @@
 'use struct'
+
 /*
-"xxxooxoooo",70,"xxxoxxoooo"),[60,80]
-"ooxooxooxo",50,"oooooxxxxx"),[10,90]
-"xxxooxoooo",70,"xxxoxxoooo"),[60,80]
+"x x x o o x o o o o" // 70
+"x x x o x x o o o o" // [60,80]
+mandou uma diferente. O mínimo é 7 - 1 (uma diferente)
 */
+
 const possibleScores = require('./main.js');
 const Test = {
   test1() {
@@ -28,25 +30,52 @@ const Test = {
   },
 
   test4() {
-    "x x x o o x o o o o" // 70
-    "x x x o x x o o o o" // [60,80]
-    // mandou uma diferente. O mínimo é 7 - 1 (uma diferente)
-    let answerOfTom = "xxxooxoooo";
-    let scoreOfTom = 70;
-    let answerOfJohn = "xxxoxxoooo"; 
-    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) //[60,80]
+    let answerOfTom = "oooooooooo";
+    let scoreOfTom = 100;
+    let answerOfJohn = "oooooooooo"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) //[100,100]
   },
 
   test5() {
-    "o o x o o x o o x o" //50 
-    "o o o o o x x x x x" //[10,90]
-    // mandou quatro diferentes. O mínimo é 5 - 4 (quatro diferentes)
-    let answerOfTom = "ooxooxooxo";
+    let answerOfTom = "oooooooooo";
+    let scoreOfTom = 100;
+    let answerOfJohn = "xxxxxxxxxx"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) //[0,0]
+  },
+
+  test6() {
+    /*
+    min = 100 - 50 = 50
+    max = 100 + 50 = 150
+    */
+    let answerOfTom = "oooooooooo";
+    let scoreOfTom = 100;
+    let answerOfJohn = "oooooxxxxx"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) //[50,50]
+  },
+
+  test7() {
+    let answerOfTom = "oooooooooo";
     let scoreOfTom = 50;
     let answerOfJohn = "oooooxxxxx"; 
-    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) //[10,90]
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) // [0,100]
+  },
+
+  test8() {
+    let answerOfTom = "oooooooooo";
+    let scoreOfTom = 40;
+    let answerOfJohn = "oooooxxxxx"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) // [10,90]
+  },
+
+  test9() {
+    let answerOfTom = "oooooooooo";
+    let scoreOfTom = 60;
+    let answerOfJohn = "oooooxxxxx"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) // [10,90]
   }
 }
-Test.test4(); 
-Test.test5();
+
+Test.test6();
+
 

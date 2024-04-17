@@ -17,6 +17,12 @@ function possibleScores(answerOfTom, scoreOfTom, answerOfJohn) {
     } else {
       min = scoreOfTom - (dif * 10);
       max = scoreOfTom + (dif * 10);
+
+      if(min < 0) min = min * (-1);
+      if(max > 100) {
+        let x = max - (dif * 10);
+      }
+
       return [min, max];
     }    
   }    
