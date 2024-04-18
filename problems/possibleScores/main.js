@@ -16,13 +16,14 @@ function possibleScores(answerOfTom, scoreOfTom, answerOfJohn) {
       return [100-scoreOfTom, 100-scoreOfTom];
     } else {
       min = scoreOfTom - (dif * 10);
-      max = scoreOfTom + (dif * 10);
+      max = (dif * 10) + (100 - scoreOfTom);
 
       if(min < 0) min = min * (-1);
       if(max > 100) {
-        let x = max - (dif * 10);
+        max = 100 - (max - 100)
+      } else if(max < min) {
+        max = 2 * max;
       }
-
       return [min, max];
     }    
   }    

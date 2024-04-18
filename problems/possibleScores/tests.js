@@ -73,9 +73,38 @@ const Test = {
     let scoreOfTom = 60;
     let answerOfJohn = "oooooxxxxx"; 
     console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)) // [10,90]
+  },
+
+  test10() {
+    /*
+    x x x o o x o o o o
+    x x x o x x o o o o
+    dif = 1
+    min = scoreOfTom - (dif * 10) => 70 - 10 = 60
+    max = (dif * 10) + (100 - scoreOfTom) => 10 + 30 = 40
+    */
+    let answerOfTom = "xxxooxoooo";
+    let scoreOfTom = 70;
+    let answerOfJohn = "xxxoxxoooo"; 
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)); //[60,80]
+  },
+
+  test11() {
+    /*
+    x x x o x x x x x o
+    o o x o x o x o x o
+    dif = 3
+    max = (dif * 10) + (100 - scoreOfTom); =>
+    max = (3 * 10) + (100 - 80); => 
+    max = 30 + 20; => max = 50
+    */
+    let answerOfTom = "xxxoxxxxxo";
+    let scoreOfTom = 80;
+    let answerOfJohn = "ooxoxoxoxo";
+    console.log(possibleScores(answerOfTom, scoreOfTom, answerOfJohn)); // [ 40, 80 ]
   }
 }
 
-Test.test6();
+Test.test11();
 
 
