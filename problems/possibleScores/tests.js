@@ -93,10 +93,9 @@ const Test = {
     /*
     x x x o x x x x x o
     o o x o x o x o x o
-    dif = 3
-    max = (dif * 10) + (100 - scoreOfTom); =>
-    max = (3 * 10) + (100 - 80); => 
-    max = 30 + 20; => max = 50
+    same = 60
+    a = 100 - Math.abs(80 - 60); // 80
+    b = Math.abs(100 - 80 - 60); // 40
     */
     let answerOfTom = "xxxoxxxxxo";
     let scoreOfTom = 80;
@@ -105,6 +104,6 @@ const Test = {
   }
 }
 
-Test.test11();
+Test.test11(); // [ 40, 80 ]
 
 

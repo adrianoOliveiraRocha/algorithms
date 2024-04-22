@@ -53,56 +53,68 @@ Note
 
     Happy Coding ^_^
 
-**Português**
+function possibleScores(aTom, sTom, aJohn) {
 
-John e Tom são alunos de Myjinxin.
+  let same = 0;
+  
+  for (let i = 0; i < aTom.length; i++)
+    if (aTom[i] === aJohn[i])
+      same += 10;
 
-Na sala de aula, Myjinxin costuma fazer 10 perguntas de julgamento, deixe os alunos escreverem a resposta. o representa certo e x representa errado. ou seja, se os alunos acharem que os 10 julgamentos estão corretos, sua resposta será "ooooooooo".
+  const a = 100 - Math.abs(sTom - same);
+  const b = Math.abs(100 - sTom - same);
+  
+  return a > b ? [ b, a ] : [ a, b ];
 
-Tom sempre responde às perguntas antes de John. Em seguida, o professor dá uma nota ao Tom, cada matéria valendo 10 pontos. ou seja, se a resposta de Tom for "ooooooooo" e a resposta correta for "ooxxxxxxxx", Tom obteve 20 pontos.
+}
 
-John não sabia qual era a resposta correta. Ele tem sua própria resposta.
+function countDiff(string1, string2) {
+    let arr1 = string1.split('');
+    let arr2 = string2.split('');
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] != arr2[i]) {
+            count++
+        }
+    }
+    return count;
+}
 
-John olhou para a resposta e a pontuação de Tom e queria saber qual a pontuação mínima possível e a pontuação máxima possível que ele poderia obter.
-Tarefa
+function possibleScores(answerOfTom, scoreOfTom, answerOfJohn) {
+    let diff = countDiff(answerOfTom, answerOfJohn);
+    let sim = 10 - diff;
+    let score = scoreOfTom / 10;
+    let min;
+    let max;
+    if (diff > score) {
+        min = diff - score
+    }
+    else {
+        min = score - diff
+    };
+    if (sim >= score) {
+        max = diff + score
+    }
+    else {
+        max = (diff - (score - sim)) + sim
+    };
 
-Você recebe três argumentos:
+    return [min*10, max*10]
+}
 
-     answerOfTom: resposta de Tom. É uma string de comprimento 10, contém apenas o ou x.
+function possibleScores(answerOfTom,scoreOfTom,answerOfJohn){
+  //coding and coding..
+    let diff = 0;
+    let min;
+    let max;
+    for (let i = 0; i < 10; i++) {
+        if (answerOfJohn[i] !== answerOfTom[i]) {
+            diff += 10;
+        }
+    }
+    diff - scoreOfTom >= 0 ? min = diff - scoreOfTom : min = scoreOfTom - diff;
+    diff + scoreOfTom <= 100 ? max = diff + scoreOfTom : max = 100 - (diff + scoreOfTom - 100);
+    return [min, max];
+}
 
-     scoreOfTom: pontuação de Tom. um número inteiro que pode ser 0,10,20,...,100.
-
-     respostaOfJohn: resposta de John. É uma string de comprimento 10, contém apenas o ou x.
-
-Seu resultado deve ser uma matriz/tupla inteira de 2 elementos: <pontuação mínima possível de John>, <pontuação máxima possível de John>
-
-Ainda não entendeu a tarefa? Veja o exemplo a seguir ;-)
-Exemplos
-
-Para answerOfTom="oooooooooo", scoreOfTom=20, answerOfJohn="oooooooooo" a saída deve ser 20,20
-
-Neste caso, a resposta de John é igual à de Tom, então sua pontuação só pode ser 20.
-
-Para answerOfTom="oooooooooo", scoreOfTom=20, answerOfJohn="xxxxxxxxxx" a saída deve ser 80,80
-
-Neste caso, a resposta de John é exatamente o oposto da de Tom, então sua pontuação só pode ser 80.
-
-Para answerOfTom="oooooooooo", scoreOfTom=20, answerOfJohn="oooooxxxxx" a saída deve ser 30,70
-
-Neste caso, a pontuação de Tom é 20. Significa duas perguntas que Tom respondeu corretamente.
-
-Vamos pensar em algumas situações:
-
-Se Tom respondeu corretamente a primeira e a segunda pergunta, toda a resposta correta pode ser "ooxxxxxxxx", John receberá 70 pontos;
-
-Se a última pergunta e a penúltima pergunta Tom responderam corretamente, toda a resposta correta pode ser "xxxxxxxxoo", John receberá 30 pontos;
-
-Se Tom respondeu corretamente a 5ª e 6ª questão, toda a resposta correta pode ser "xxxxooxxxx", John receberá 50 pontos;
-
-...e outras situações...
-
-Então, John pode conseguir no mínimo 30 pontos, no máximo 70 pontos.
-Observação
-
-     Boa codificação ^_^
 
