@@ -1,6 +1,6 @@
 'use strict'
-
-function generateHashtag (str) {  
+// Passou. Vai pŕo próximo
+function generateHashtag (str) { 
   function onlySpace(str) {
     let isSpace = 0;
     for(let i = 0; i < str.length; i++) {      
@@ -9,17 +9,21 @@ function generateHashtag (str) {
     if(str.length == isSpace) return true;
   }
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   if(str.length == 0) return false;
-  if(str.length > 140) return false;
   if(onlySpace(str)) return false;
 
   let words = str.split(' ');
-  let newStr;
+  let newStr = "#";
   for(let i = 0; i < words.length; i++) {
-    newStr+="#";
-    newStr+=words[i].toUpperCase();
+    newStr += capitalizeFirstLetter(words[i]);
   }
-  return newStr;
+
+  if(newStr.length > 140) return false;
+  else return newStr;
 }
 
 module.exports = generateHashtag;
