@@ -2,8 +2,7 @@
 
 function diff(a, b){
   let aStr = a.sort().join("");
-  let bStr = b.sort().join("");
-  
+  let bStr = b.sort().join("");  
   let d = [];
   if(aStr == bStr) return d;
   else {
