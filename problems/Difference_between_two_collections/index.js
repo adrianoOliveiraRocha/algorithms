@@ -1,17 +1,22 @@
 'use strict'
 
 function diff(a, b){
-  let count = () => {
-    if(a.length >= b.length) return a.length;
-    else return b.length;
-  }
   let aStr = a.sort().join("");
   let bStr = b.sort().join("");
-  // console.log()
-  if(aStr == bStr) return [];
+  let d = [];
+  if(aStr == bStr) return d;
   else {
-    console.log(aStr, bStr);
+    let size = aStr >= bStr ? a.length : b.length;
+    for(let i = 0; i < size; i++) {
+      if(aStr[i] && !b.includes(aStr[i])) {
+        if(!d.includes(aStr[i])) d.push(aStr[i]);
+      }
+      if(bStr[i] && !a.includes(bStr[i])) {
+        if(!d.includes(bStr[i])) d.push(bStr[i]);
+      }
+    }
   }
+  return d.sort();
 }
 
 export default diff;

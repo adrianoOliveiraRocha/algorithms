@@ -11,3 +11,7 @@ B = [t, g, g, i, k, f]
 
 difference = [a, e, g, j, k]
 
+Error
+should return the sorted characteres
+Expected: '[\'d\', \'e\', \'j\', \'z\']', instead got: '[\'d\', \'j\']'
+
