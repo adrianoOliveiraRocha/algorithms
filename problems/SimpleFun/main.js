@@ -5,25 +5,29 @@ of the array from repeated number to the last number without count with
 repetition
 */
 function repeatSequenceLen(a0) {
-  let sequence = [];
-  let nArr = a0.toString().split("");
-  let sumSquare = ((nArr) => {
+  let sequence = []; 
+  let ss = 0;
+
+  const sumSquare = (n) => {
+    let nArr = n.toString().split("");
     let r = 0;
     for(let i = 0; i < nArr.length; i++) {
-      let x = Math.pow(parseInt(nArr[i]), 2)
-      r += x
+      r += Math.pow(parseInt(nArr[i]), 2)
     }
     return r
-  })(nArr)
-  
-  if(!sequence.includes(sumSquare)) {
-    sequence.push(sumSquare)
-    console.log(sequence)
-    repeatSequenceLen(sumSquare)
   }
-  else {
-    return sequence;
-  }  
+
+  while(true) {
+    ss = sumSquare(a0)
+    if(sequence.includes(ss)) {
+      return sequence.length;      
+    } else {
+      sequence.push(ss)
+      a0 = ss;
+    }
+  }
+  
+   
 }
 
 module.exports = repeatSequenceLen
