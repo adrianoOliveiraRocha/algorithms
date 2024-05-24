@@ -1,9 +1,5 @@
 'use strict'
-/*
-Keep the sumSquares in an array. When apper a repetition, count the size 
-of the array from repeated number to the last number without count with 
-repetition
-*/
+
 function repeatSequenceLen(a0) {
   let sequence = []; 
   let ss = 0;
@@ -20,7 +16,8 @@ function repeatSequenceLen(a0) {
   while(true) {
     ss = sumSquare(a0)
     if(sequence.includes(ss)) {
-      return sequence.length;      
+      let rs = sequence.slice(sequence.indexOf(ss)); 
+      return rs.length;           
     } else {
       sequence.push(ss)
       a0 = ss;
