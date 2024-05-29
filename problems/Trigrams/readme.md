@@ -9,3 +9,4 @@ return an empty string for phrases shorter than 3
 Example:
 
 "the quick red" --> "the he_ e_q _qu qui uic ick ck_ k_r _re red"
+
