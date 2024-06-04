@@ -6,16 +6,29 @@ function lockerRun(lockers){
     for(let i = jump; i <= lockers; i += jump) {
       if(jump == 1) lObj[i] = true
       else {
-        if(lObj[i] == true) lObj[i] = false
-        else lObj[i] = true
+        if(lObj[i] == true) {
+          lObj[i] = false
+          //remove
+        }
+        else {
+          lObj[i] = true
+        }
       }      
     }
     jump++
   }
 
-  Object.keys(lObj).forEach(key => {
-    if(lObj[key]) openned.push(parseInt(key))
-  })  
+  function removeItemOnce(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    return arr;
+  }
+
+  // Object.keys(lObj).forEach(key => {
+  //   if(lObj[key]) openned.push(parseInt(key))
+  // })  
   return lObj
 }
 
