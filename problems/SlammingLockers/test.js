@@ -22,8 +22,8 @@ const Test = {
   }
 }
 
-// Test.test1();
-// Test.test2();
-// Test.test3();
-// Test.test5();
+Test.test1();
+Test.test2();
+Test.test3();
+Test.test5();
 Test.test8();

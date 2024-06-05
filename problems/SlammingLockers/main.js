@@ -4,32 +4,30 @@ function lockerRun(lockers){
   let jump = 1
   while(jump <= lockers) {
     for(let i = jump; i <= lockers; i += jump) {
-      if(jump == 1) lObj[i] = true
-      else {
+      if(jump == 1) {
+        lObj[i] = true
+        openned.push(i)
+      } else {
         if(lObj[i] == true) {
           lObj[i] = false
-          //remove
+          removeItemOnce(i);
         }
         else {
           lObj[i] = true
+          openned.push(i)
         }
       }      
     }
     jump++
   }
 
-  function removeItemOnce(arr, value) {
-    var index = arr.indexOf(value);
+  function removeItemOnce(value) {
+    var index = openned.indexOf(value);
     if (index > -1) {
-      arr.splice(index, 1);
+      openned.splice(index, 1);
     }
-    return arr;
   }
-
-  // Object.keys(lObj).forEach(key => {
-  //   if(lObj[key]) openned.push(parseInt(key))
-  // })  
-  return lObj
+  return openned
 }
 
 module.exports = lockerRun
