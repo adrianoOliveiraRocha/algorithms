@@ -19,11 +19,21 @@ const Test = {
 
   test8() {
     console.log(lockerRun(8))
+  },
+
+  test10() {
+    console.log(lockerRun(10))
+  },
+
+  test8131259() {
+    console.log(lockerRun(8131259))
   }
 }
 
-Test.test1();
-Test.test2();
-Test.test3();
-Test.test5();
-Test.test8();
+// Test.test1();
+// Test.test2();
+// Test.test3();
+// Test.test5();
+// Test.test8();
+// Test.test8131259()
+Test.test10();
