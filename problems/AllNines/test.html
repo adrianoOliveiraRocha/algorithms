@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function allNines(x) {
+      if(x % 2 == 0) return -1;
+      let f = 10;
+      while(true) {
+        let test = (f-1) / x;
+        if(Number.isInteger(test)) return BigInt(test);
+        else f *= 10;
+      }
+    }
+
+    console.log(allNines(12));
+    console.log(allNines(11));
+    console.log(allNines(13));
+  </script>
+</body>
+</html>
