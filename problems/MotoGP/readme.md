@@ -13,12 +13,16 @@ Function Specifications:
 Input: A string representing the racer's name and an integer indicating their qualifying position.
 Output: A string describing the racer's starting position on the grid in the specified format.
 
+line != 1 && pInline == 2
 Example Input: 'Valentino Rossi', 11
 Example Output: 'Valentino Rossi starts from the middle of the 4th row
 
 Exceptions:
 
+line == 1 && pInline == 1
 If position is 1 then the text should be '[Rider Name] starts from pole position'
+
+line == 1 && pInline == 2
 If the racer qualifies in the 1st row, the output should use "front row" instead.
 Example Input: 'Jorge Martin, 2
 Example Output: 'Jorge Martin starts from the middle of the front row'

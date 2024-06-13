@@ -3,11 +3,14 @@ const gridPosition = require('./main')
 
 const Test = {
   test() {
-    console.log(gridPosition('Any', 11))
+    console.log(gridPosition('Any', 13))
   },
 
-
   test1() {
+    console.log(gridPosition('Any', 1))
+  },
+
+  test11() {
     console.log(gridPosition('Valentino Rossi', 11))
     //Output: Valentino Rossi starts from the middle of the 4th row
   },
@@ -18,4 +21,4 @@ const Test = {
   }
 }
 
-Test.test1();
+Test.test();
