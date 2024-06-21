@@ -1,5 +1,5 @@
 'use strict'
-// Falta só testar
+// ok
 const binaryArrayToNumber = arr => {
   let acum = 0, limit = arr.length-1;
   for(let i = 0; i < arr.length; i++) {
