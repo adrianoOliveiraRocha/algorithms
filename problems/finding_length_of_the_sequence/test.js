@@ -2,10 +2,15 @@
 
 const lengthOfSequence = require('./main')
 
+/*
+Error:
+Returns zero as when there are more than two instances: expected 3 to equal +0
+*/
+
 const Tests = {
   test1() {
     let arr = [0, -3, 7, 4, 0, 3, 7, 9, 7], n = 7;
-    console.log(lengthOfSequence(arr, n)) // 5
+    console.log(lengthOfSequence(arr, n)) // 0
   },
   
   test2() {
@@ -22,11 +27,14 @@ const Tests = {
   
   test5() {
     console.log(lengthOfSequence([-7, 6, 2, -7, 4], -7)) // 4
-  },
-  
-  test5() {
-    console.log(lengthOfSequence([-7, 6, 2, -7, 4], -7)) // 4
   }
 }
-
 Tests.test1()
+Tests.test2()
+Tests.test3()
+Tests.test4()
+Tests.test5()
+
+
+
+
