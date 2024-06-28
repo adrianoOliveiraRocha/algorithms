@@ -18,7 +18,7 @@ For this input:
   "Dancer Moore", 
   "Prancer Chua", 
   "Vixen Hall", 
-  "Comet Karavani",        
+  "Comet Karavani",
   "Cupid Foroutan", 
   "Donder Jonker", 
   "Blitzen Claus"
