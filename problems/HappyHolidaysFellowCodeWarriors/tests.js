@@ -36,9 +36,18 @@ const Tests = {
       "Dasher Tonoyan",
     ]
     console.log(sortReindeer(reindeerNames))
+  },
+  
+  test3() {
+    let reindeerNames = [
+      'Kenjiro Mori', 'Susumu Mori', 'Akira Mori'
+    ]
+    console.log(sortReindeer(reindeerNames))
   }
 }
 
 Tests.test1();
 Tests.test2();
+Tests.test3();
+
 

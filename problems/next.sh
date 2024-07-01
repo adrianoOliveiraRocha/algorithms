@@ -1,1 +1,1 @@
-xed ~/algorithms/problems/HappyHolidaysFellowCodeWarriors/main.js
+xed ~/algorithms/problems/EmailAddressObfuscator/main.js
