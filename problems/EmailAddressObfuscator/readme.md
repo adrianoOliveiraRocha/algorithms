@@ -23,3 +23,10 @@ Change only the @ and . characters.
 Email addresses may contain more than one . character.
 Note the additional whitespace around the bracketed literals in the examples!
 
+
+
+Tests
+Test.assertEquals(obfuscate('test@123.com'), 'test [at] 123 [dot] com')
+Test.assertEquals(obfuscate('Code_warrior@foo.ac.uk'), 'Code_warrior [at] foo [dot] ac [dot] uk')
+  });
+
