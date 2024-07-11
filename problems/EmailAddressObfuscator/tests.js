@@ -2,7 +2,7 @@
 const obfuscate = require('./main.js')
 
 /*
-expected 'Hmm, this would be better with input validation [dot]  [dot]  [dot]  [at] Hmm, this would be better with input validation [dot]  [dot]  [dot] !' to equal 'Hmm, this would be better with input validation [dot]  [dot]  [dot] !'
+expected 'Hmm, this would be better with input validation...!' to equal 'Hmm, this would be better with input validation [dot]  [dot]  [dot] !'
 */
 
 const Test = {
@@ -31,7 +31,6 @@ const Test = {
 //Test.test2();
 //Test.test3();
 //Test.test4();
-
 Test.test5()
 
 
