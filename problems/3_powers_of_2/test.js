@@ -3,7 +3,7 @@ const threePowers = require('./main.js')
 
 const Tests = {
   test1() {
-    console.log(threePowers)  
+    console.log(threePowers(8388608))  
   }
 }
 
