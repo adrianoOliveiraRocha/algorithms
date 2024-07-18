@@ -1,21 +1,21 @@
 'use strict'
+
 /*
-1 - numa divisão por 3 o resto pode ser 1 ou 2
-2 - se o resultado de n / 3 for uma potência de 2, soma os dois 
-primeiros números e coloca o resto na segunda posição
+Caso 9
+Depois da divisão eu tenho 3 3 3. Mas se n for 3 é true 
 */
+
 function threePowers(n) {
-  if(n < 3) return false;
+  if(n < 3) return false
   n = parseInt(n)
   let r = n % 3
   let v = parseInt(n/3)
     
   if(testpw(v)) {
-    return true;
+    return true
   } else {
     return false
-  }
-  
+  }  
 }
 
 function testpw(v) {
