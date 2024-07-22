@@ -1,5 +1,6 @@
 'use strict'
 const mergesort = require('./modules/mergesort');
+const insertionSort = require('./modules/insertionSort')
 
 const Tests = {
   test1() {
@@ -30,7 +31,12 @@ const Tests = {
     let arr = [5, 6, 1, 12, 30];
     console.log("original: ", arr);
     console.log(mergesort(arr, arr.length)); // 2
+  },
+
+  test6() { // insertion sort
+    let arr = [7, 12, 9, 11, 3]
+    console.log(insertionSort(arr));
   }
 }
 
-Tests.test1();
+Tests.test6();

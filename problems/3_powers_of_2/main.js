@@ -10,11 +10,12 @@ function threePowers(n) {
   n = parseInt(n)
   let r = n % 3
   let v = parseInt(n/3)
-    
+  console.log(n, v)
   if(testpw(v)) {
     return true
   } else {
-    return false
+    let max = n - 2
+     
   }  
 }
 
@@ -26,5 +27,7 @@ function testpw(v) {
   }
   return true
 }
+
+//console.log(testpw(5))
 
 module.exports = threePowers;

@@ -1,3 +1,5 @@
+'use strict'
+
 function insertionSort(arr) {
   let goOn = true
   while(goOn) {

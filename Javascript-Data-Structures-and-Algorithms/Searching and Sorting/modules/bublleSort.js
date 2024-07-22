@@ -1,5 +1,4 @@
 'use strict'
-let arr = [6,4,3,2,1,5];
 
 function bublleSort(arr) {
   for(let i = 0; i < arr.length; i++) {
@@ -13,6 +12,8 @@ function bublleSort(arr) {
   }
   console.log(arr);
 }
+
+let arr = [6,4,3,2,1,5];
 
 bublleSort(arr);
 
