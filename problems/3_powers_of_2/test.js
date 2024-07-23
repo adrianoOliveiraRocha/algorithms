@@ -42,11 +42,11 @@ const Tests = {
   }
 }
 
-//Tests.test2() //true
+//Tests.test2() //false
 //Tests.test3() //true
 //Tests.test5() //true
-Tests.test15() //false 
-//Tests.test9() //true
+//Tests.test15() //false 
+Tests.test9() //true
 //Tests.test6() //true
 
 
