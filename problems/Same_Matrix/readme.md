@@ -39,3 +39,30 @@ count_different_matrices([[1, 2, 3, 4],
 Notes
 
 All the matrices' elements are integers between 1 and 9, and the number of matrices will not exceed 1000.
+
+Tests:
+describe("Tests", function() {
+  it("samples", function() {
+    let ms = [[1, 2, 3, 4],
+              [3, 1, 4, 2],
+              [4, 3, 2, 1],
+              [2, 4, 1, 3]];
+    assert.deepEqual(countDifferentMatrices(ms), 1);
+
+    ms = [[3, 1, 2, 3],
+          [3, 1, 2, 3],
+          [1, 3, 3, 2],
+          [3, 2, 1, 3]];
+    assert.deepEqual(countDifferentMatrices(ms), 1);
+
+    ms = [[5, 1, 2, 6],
+          [5, 4, 3, 5],
+          [2, 5, 6, 1]];
+     assert.deepEqual(countDifferentMatrices(ms), 2);
+
+     ms = [[1, 2, 2, 1],
+           [1, 1, 2, 2],
+           [2, 1, 1, 2],
+           [2, 1, 2, 1],
+           [1, 2, 1, 2]];
+    assert.deepEqual(countDifferentMatrices(ms), 2);
