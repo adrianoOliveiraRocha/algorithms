@@ -1,5 +1,5 @@
 'use strict'
-
+// confuse question
 function countDifferentMatrices(matrices) {
   let diff = [matrices[0]]
   let e1 = matrices[0][0], e2 = matrices[0][1],
