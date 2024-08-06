@@ -17,36 +17,4 @@ function isBST(root) {
   return true;
 }
 
-
-function isBST0(root) {
-  
-  let currentRigth, currentLeft;
-
-  if(root) {
-    if(root.rigth) currentRigth = root.rigth;
-    if(root.left) currentLeft = root.left;
-  } else return 0;
-
-  if(currentLeft && root.data < currentLeft.data) return 0;
-  if(currentRigth && root.data > currentRigth.data) return 0;
-  
-  // left
-  while(currentLeft) {
-    if(currentLeft.left && currentLeft.data < currentLeft.left.data) {
-      return 0;
-    } else currentLeft = currentLeft.left;
-  }
-
-  // rigth
-  while(currentRigth) {
-    if(currentRigth.rigth && currentRigth.data > currentRigth.rigth.data) {
-      return 0;
-    } else currentRigth = currentRigth.rigth;
-  }
-
-  return 1;
-
-}
-
-
 module.exports = isBST;

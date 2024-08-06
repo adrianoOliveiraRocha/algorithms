@@ -4,50 +4,48 @@ const isBST = require('./main');
 const Node = require('./modules/Node');
 
 const Tests = {
+
   test1() {
-    let root = new Node();
-    root.data = 2; 
+    /*
+        Input:
+       2
+     /    \
+    1      3
+            \
+             5
+    Output: true
+    Explanation:
+    The left subtree of every node contains smaller keys and right subtree of every node contains greater. Hence, the tree is a BST.
+    */
+    let root = new Node(); root.data = 2;
+
     let n1 = new Node(); n1.data = 1;
+    root.left = n1;
+
     let n3 = new Node(); n3.data = 3;
-    root.left = n1, root.rigth = n3;
-    console.log(isBST(root));
+    root.rigth = n3;
+
+    let n5 = new Node(); n5.data = 5;
+    n3.rigth = n5;
+    console.log(isBST(root)); // OK
   },
 
   test2() {
-    let root = new Node();
-    root.data = 2; 
+    /*
+    Input:
+      2
+       \
+        7
+         \
+          6
+           \
+            9
+    Output: false
+    Explanation:
+    Since the node with value 7 has right subtree nodes with keys less than 7, this is not a BST.
+    */
 
-    let n1 = new Node();
-    n1.data = 7; 
-    root.rigth = n1;
-
-    let n2 = new Node();
-    n2.data = 6; 
-    n1.rigth = n2;
-
-    let n3 = new Node();
-    n3.data = 5; 
-    n2.rigth = n3;
-
-    let n4 = new Node();
-    n4.data = 9; 
-    n3.rigth = n4;
-
-    let n5 = new Node();
-    n5.data = 2; 
-    n4.rigth = n5;
-
-    let n6 = new Node();
-    n6.data = 6; 
-    n5.rigth = n6;
-    
-    console.log(isBST(root));
-  },
-
-  test3() {
-    
   }
 }
 
-// Tests.test1();
-Tests.test2();
+Tests.test1();
