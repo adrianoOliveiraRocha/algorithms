@@ -1,4 +1,4 @@
-// Bobble sort example
+// removing duplicates from a array
 
 let arr = ["apple", "mango", "apple",
           "orange", "mango", "mango"];
