@@ -1,24 +1,34 @@
 'use strict'
 
 function isBST(root) {
-  let nodeStack = [];
-  nodeStack.push(root);
-  while(nodeStack.length) {
-    let node = nodeStack.pop();
-    if(node.rigth) {
-      if(node.data > node.rigth.data) return false;
-      else nodeStack.push(node.rigth);
-    }
-    if(node.left) {
-      if(node.data == 20) {
-        console.log(node.data, node.left);
-        console.log(node.data > node.left.data);
-      }
-      if(node.data < node.left.data) return false;
-      else nodeStack.push(node.left);
-    };
+  let rData = root.data;
+  let lArr = [], rArr = [];
+
+  if(root.left) {
+    if(root.data < root.left.data) return false;
+    else lArr.push(root.left);  
   }
-  return true;
+
+  if(root.rigth) {
+    if(root.data > root.rigth.data) return false;
+    else rArr.push(root.rigth);  
+  }  
+  // analize lArr
+  while(lArr.length) {
+    let lNode = lArr.pop();
+    if(lNode.left) {
+      if(lNode.data > lNode.left.data) return false;
+      else {
+        if(lNode.left.data > rData) return false;
+        else {
+          lArr.push(lNode.left);
+        }
+      }  
+    }    
+  }
+  // analize rArr
+  //...
+
 }
 
 
