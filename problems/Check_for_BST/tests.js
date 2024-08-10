@@ -7,7 +7,7 @@ const Tests = {
 
   test1() {
     /*
-        Input:
+    Input:
        2
      /    \
     1      3
@@ -27,7 +27,7 @@ const Tests = {
 
     let n5 = new Node(); n5.data = 5;
     n3.rigth = n5;
-    console.log(isBST(root)); // OK
+    console.log(isBST(root)); // true
   },
 
   test2() {
@@ -56,7 +56,7 @@ const Tests = {
     n6.rigth = n9;
     // console.log(root);
 
-    console.log(isBST(root)); // OK
+    console.log(isBST(root)); // false
   },
 
   test3() {
@@ -84,10 +84,10 @@ const Tests = {
     let n25 = new Node(); n25.data = 25;
     n20.rigth = n25;
 
-    console.log(isBST(root)); //
+    console.log(isBST(root)); // false
   }
 }
 
-// Tests.test1();
-// Tests.test2();
+Tests.test1();
+Tests.test2();
 Tests.test3();

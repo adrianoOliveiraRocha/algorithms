@@ -1,5 +1,21 @@
 'use strict'
+/*
+My code is ok. The test return:
+Suggest Feedback
+Compilation Completed
+For Input: 
+2 1 3
+Your Output: 
+Runtime Error 
+Hangup (SIGHUP)
+/home/guest/sandbox/Solution.js:118
+    let rData = root.data;
+        ^^^^^
+SyntaxError: Unexpected identifier 
 
+Aí dentu fi de rapariga
+
+*/
 function isBST(root) {
   let rData = root.data;
   let lArr = [], rArr = [];
@@ -14,20 +30,55 @@ function isBST(root) {
     else rArr.push(root.rigth);  
   }  
   // analize lArr
-  while(lArr.length) {
+  while(lArr.length) { // ok
     let lNode = lArr.pop();
     if(lNode.left) {
-      if(lNode.data > lNode.left.data) return false;
+      if(lNode.data < lNode.left.data) return false;
       else {
         if(lNode.left.data > rData) return false;
         else {
           lArr.push(lNode.left);
         }
       }  
+    } 
+
+    if(lNode.rigth) {
+      if(lNode.data > lNode.rigth.data) return false;
+      else {
+        if(lNode.rigth.data > rData) return false;
+        else {
+          lArr.push(lNode.left);
+        }
+      }
     }    
   }
   // analize rArr
-  //...
+  while(rArr.length) {
+    let rNode = rArr.pop();
+    if(rNode.rigth) {
+      if(rNode.data > rNode.rigth.data) return false;
+      else {
+        if(rNode.rigth.data < rData) {
+          return false;
+        }
+        else {
+          rArr.push(rNode.rigth);
+        }
+      }  
+    }
+
+    if(rNode.left) {
+      if(rNode.data > rNode.left.data) return false;
+      else {
+        if(rNode.left.data < rData) return false;
+        else {
+          rArr.push(rNode.left);
+        }
+      }
+    }    
+  }
+
+  return true;
 
 }
 
