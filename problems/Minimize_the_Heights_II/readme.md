@@ -20,8 +20,7 @@ Output:
 Explanation:
 The array can be modified as 
 {1+k, 5-k, 8-k, 10-k} = {3, 3, 6, 8}. 
-The difference between 
-the largest and the smallest is 8-3 = 5.
+The difference between the largest and the smallest is 8-3 = 5.
 Example 2:
 
 Input:
