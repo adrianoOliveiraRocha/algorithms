@@ -1,3 +1,3 @@
 <h1>
-Algorithems :)
+Algorithms :)
 </h1>
