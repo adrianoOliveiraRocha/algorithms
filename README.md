@@ -1,3 +1,3 @@
 <h1>
-Problems solutions :)
+Algorithems :)
 </h1>
