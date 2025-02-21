@@ -17,16 +17,8 @@ const Tests = {
   t3() {
     let tiles = "V";
     console.log(numTilePossibilities(tiles));
-  },
-
-  aleatories() {
-    let count = { A: 2, B: 1 };
-    for(const letter in count) {
-      console.log(letter);
-    }
   }
 }
 Tests.t1() // 8
 // Tests.t2() // 188
 // Tests.t3() // 1
-// Tests.aleatories();
