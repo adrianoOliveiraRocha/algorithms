@@ -1,2 +1,2 @@
-cd numTilePossibilities;
+cd MergeTwoSortedLists;
 code ./
